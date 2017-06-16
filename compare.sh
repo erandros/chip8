@@ -1,0 +1,2 @@
+./a.exe ./roms/15PUZZLE | sed 's/current opcode: 0x//g' | head -n 50 > a.txt
+./b.exe ./roms/15PUZZLE | sed 's/Enter the name of the game: //g' | sed -rn '/Executing\ (\S+)\ at\ \S+\ ,\ I:[0-9a-fA-F]+\ SP:[0-9a-fA-F]+ \1/p'  | head -n 50 > b.txt
